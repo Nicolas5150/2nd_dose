@@ -1,9 +1,7 @@
 <?php
 // Require the add order php to send the posts to the database.
 // This will take care of the orders sent to the the "back of house".
-// require('add_order.php');
 require("add_order.php");
-
 // https://www.youtube.com/watch?v=6IfwYMI25L8
 // https://developer.paypal.com/docs/classic/ipn/integration-guide/IPNSetup/
 // STEP 1: Read POST data
