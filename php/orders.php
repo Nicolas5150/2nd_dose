@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>2nd Dose</title>
+  <title>2nd Dose - Orders</title>
 
   <!--jquery before materialize-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -89,6 +89,8 @@
 
 <?php
 	while ($row=mysql_fetch_array($select)) {
+    //set refresh for backend to load new orders every 10 second.
+    header('Refresh: 10; url=orders.php');
 ?>
 <tr id="row<?php echo $row['id'];?>">
     <td id="drink<?php echo $row['id'];?>"><?php echo $row['drink'];?></td>
@@ -101,8 +103,6 @@
   </td>
 </tr>
 <?php
-	//set refresh for backend to load new orders every 10 second.
-	header('Refresh: 10; url=orders.php');
 	}
 ?>
 </table>

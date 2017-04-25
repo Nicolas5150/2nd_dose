@@ -374,6 +374,11 @@ background-color: #8e342c;
 
 /* ~~~~~~~~~~~~ helpful css prestyles ``````````*/
 
+.hovers:hover {
+  color: #8e342c;
+
+}
+
 .fontSize {
 
   font-size: 1.6em ;
@@ -646,25 +651,10 @@ and (max-device-width: 5500px) {
 
 }
 
-/* pushpin */  /*
- // Class for when element is above threshold
-  .pin-top {
-    position: relative;
-  }
+.nudgeLeft {
+  margin-right: 10%;
+}
 
-  // Class for when element is below threshold
-  .pin-bottom {
-    position: relative;
-  }
-
-  // Class for when element is pinned
-  .pinned {
-    position: fixed !important;
-  }
- // Only necessary for window height sized blocks.
-  html, body, .block {
-    height: 100%;
-  }
 
 
 /* ~~~~~~~~~~~~ Angel css styles END ``````````*/
