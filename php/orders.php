@@ -10,7 +10,7 @@
   <!--materialize css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/twilio_text.js"></script>
+  <script type="text/javascript" src="twillio_text.js"></script>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -59,28 +59,28 @@
 
       <!--     php and tables start         -->
 
-<div id="wrapper">
+<div id="wrapper" class="margin5">
 
 <?php
-	$username = "dig4503group2";
-	$password = "knights4321!";
-	$database = "dig4503group2";
+  $username = "dig4503group2";
+  $password = "knights4321!";
+  $database = "dig4503group2";
 
-	$connect=mysql_connect("localhost","$username","$password");
-	$db=mysql_select_db($database);
+  $connect=mysql_connect("localhost","$username","$password");
+  $db=mysql_select_db($database);
 
-	$select = mysql_query("SELECT * FROM orders");
+  $select = mysql_query("SELECT * FROM orders");
 ?>
 
 <table class="col s12 striped bordered borderR" id="order_table">
   <thead>
   <tr class="tableRow">
-	<th class="fontSize">Drink:</th>
-	<th class="fontSize">Size:</th>
-	<th class="fontSize">Qnt:</th>
-	<th class="fontSize">Phone:</th>
-	<th class="fontSize">Notes:</th>
-	<th class="fontSize">Complete:</th>
+  <th class="fontSize">Drink:</th>
+  <th class="fontSize">Size:</th>
+  <th class="fontSize">Qnt:</th>
+  <th class="fontSize">Phone:</th>
+  <th class="fontSize">Notes:</th>
+  <th class="fontSize">Complete:</th>
   </tr>
   </thead>
     <tbody>
@@ -88,28 +88,28 @@
     </tbody>
 
 <?php
-	while ($row=mysql_fetch_array($select)) {
+  while ($row=mysql_fetch_array($select)) {
     //set refresh for backend to load new orders every 10 second.
     header('Refresh: 10; url=orders.php');
 ?>
 <tr id="row<?php echo $row['id'];?>">
-    <td id="drink<?php echo $row['id'];?>"><?php echo $row['drink'];?></td>
-    <td id="size<?php echo $row['id'];?>"><?php echo $row['size'];?></td>
-    <td id="quantity<?php echo $row['id'];?>"><?php echo $row['quantity'];?></td>
-    <td id="phone<?php echo $row['id'];?>"><?php echo $row['phone'];?></td>
-    <td id="notes<?php echo $row['id'];?>"><?php echo $row['notes'];?></td>
+    <td class="tabledata" id="drink<?php echo $row['id'];?>"><?php echo $row['drink'];?></td>
+    <td class="tabledata" id="size<?php echo $row['id'];?>"><?php echo $row['size'];?></td>
+    <td class="tabledata" id="quantity<?php echo $row['id'];?>"><?php echo $row['quantity'];?></td>
+    <td class="tabledata" id="phone<?php echo $row['id'];?>"><?php echo $row['phone'];?></td>
+    <td class="tabledata" id="notes<?php echo $row['id'];?>"><?php echo $row['notes'];?></td>
   <td>
-   	<input type="button" class="delete_btn deleteButton btn lightBrown" id="delete_btn<?php echo $row['id'];?>" value="delete" onclick="delete_row('<?php echo $row['id'];?>');">
+    <input type="button" class="delete_btn deleteButton btn lightBrown" id="delete_btn<?php echo $row['id'];?>" value="delete" onclick="delete_row('<?php echo $row['id'];?>');">
   </td>
 </tr>
 <?php
-	}
+  }
 ?>
 </table>
 
  <!--     php and tables end         -->
-		</div>
-	</div>
+    </div>
+  </div>
 
 
 </div>
@@ -129,7 +129,7 @@
           <h5 class="white-text">Navigation</h5>
           <ul>
             <li><a class="white-text" href="#tickets">Tickets</a></li>
-            <li><a class="white-text" href="../index.html">Home Page</a></li>
+            <li><a class="white-text" href="index.html">Home Page</a></li>
 
           </ul>
         </div>
